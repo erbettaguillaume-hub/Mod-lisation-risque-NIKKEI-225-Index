@@ -41,7 +41,7 @@ L’objectif est de **prévoir la volatilité conditionnelle** et de **quantifie
   - ADF (H0 : racine unitaire)
   - KPSS (H0 : stationnarité)
 - **Dépendance / hétéroscédasticité** :
-  - Ljung-Box sur r puis r^2
+  - Ljung-Box sur r_t puis r_t^2
   - ARCH-LM (détection d’effets ARCH)
 
 ### D) Estimation GARCH (Student-t)
@@ -54,7 +54,7 @@ Modèle estimé (forme générale) :
 
 ### E) Diagnostics de résidus (qualité d’ajustement)
 Sur les résidus standardisés :
-- Ljung-Box sur \(z_t\) et \(z_t^2\)
+- Ljung-Box sur z_t et z_t^2
 - ARCH-LM (absence d’effets ARCH résiduels)
 
 ### F) Prévisions VaR / ES (Student-t standardisée)
@@ -63,7 +63,7 @@ Sur les résidus standardisés :
 
 ### G) Backtesting rolling / expanding
 - Ré-estimation du modèle à chaque date de test
-- **Hit VaR** :
+- Détermination des moments où l'on dépassait la VaR
 - Traçage conjoint : rendements réalisés vs seuils VaR/ES.
 
 ## 📦 Prérequis & dépendances
